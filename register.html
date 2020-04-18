@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+    <script src="js/validate.js"></script>
+    <link rel="stylesheet" href="sign.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+    <link href='https://fonts.googleapis.com/css?family=Oleo Script Swash Caps' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="signup1\colorlib-regform-8\fonts\material-icon\css\material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="signup1\colorlib-regform-8\css\style.css">
+</head>
+<body>
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form  id="signup-form" class="signup-form" action="logIn.html" >
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name*"/>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Address" class="form-input" id="address" rows="1" placeholder="Your Address"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select name="dropdown" id="districts" class="form-input">
+                                <option value="Your District" class="form-input" id="s1">Your District*</option>
+                                <option value="Kasaragod">Kasaragod</option>
+                                <option value="Kannur">Kannur</option>
+                                <option value="Wayanad">Wayanad</option>
+                                <option value="Kozhikode">Kozhikode</option>
+                                <option value="Malappuram">Malappuram</option>
+                                <option value="Palakad">Palakad</option>
+                                <option value="Thissur">Thissur</option>
+                                <option value="Ernakulam">Ernakulam</option>
+                                <option value="Idukki">Idukki</option>
+                                <option value="Kottayam">Kottayam</option>
+                                <option value="Pathanamthitta">Pathanamthitta</option>
+                                <option value="Alappuzha">Alappuzha</option>
+                                <option value="Kollam">Kollam</option>
+                                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                               </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="gender" id="female" value="female">Female
+                            <input type="radio" name="gender" id="male" value="female">Male
+                            <input type="radio" name="gender" id="trans" value="Trans">Transgender
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="state" id="state" placeholder="Your State*"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="Country" id="Country" placeholder="Your Country*"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-input" name="number" id="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}||[0-9]{3}.[0-9]{3}.[0-9]{4}||[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="Your Phone* [xxx-xxx-xxxx, xxx.xxx.xxxx, xxx xxx xxxx]" oninput="phonenumber();"/>
+                            <p id="ph"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" oninput="return emailValidate();" placeholder="Your Email*"/>
+                            <p id="first"></p>
+                        </div>
+                        <div class="form-group">                           
+                            <input type="password" placeholder="Password*" class="form-input pswrd" id="password" size="8" minlength="8" maxlength="20" onkeyup="return passwordValidate();" required>
+                            <div class="progress-bar progress-bar-striped" style="width:0%;height:5px" id="progress"></div>
+                            <i id="pass-statuss" class="fa fa-eye" onclick="active();" ></i>
+                            <p id="two"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Confirm your password*" onkeyup="return check();"/>
+                            <p id="alert">  </p>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"/>
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <button name="submit" id="submit" class="form-submit" type="submit" onclick="return submitFun();">Sign Up</button>
+                            <p id="main"></p>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="logIn.html" class="loginhere-link"> Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    <script>
+             var input = document.querySelector('.pswrd');
+            // var show = document.querySelector('.show');
+            var passStatus = document.getElementById('pass-statuss');
+            show.addEventListener('click', active);
+            function active(){
+              if(input.type === "password"){
+                input.type = "text";
+                passStatus.className='fa fa-eye-slash';
+                show.style.color = "#1DA1F2";
+                // show.textContent = "HIDE";
+              }else{
+                input.type = "password";
+                // show.textContent = "SHOW";
+                passStatus.className='fa fa-eye';
+                show.style.color = "#111";
+              }
+            }
+    </script>
+    </div>
+    
+</body>
+</html>

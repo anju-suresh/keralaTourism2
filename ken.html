@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #images{
+            width: auto;
+            height: 300px;
+            overflow: hidden;
+            border: 2px solid black;
+            background-size: cover;
+        }
+        #images img{
+            animation: kenburnes 20s infinite;
+        }
+        @keyframes kenburnes{
+            0%{
+                opacity: 0;
+            }
+            5%{
+                opacity: 1;
+            }
+            95%{
+                transform: scale3d(1.5,1.5,1.5) translate3d(-190px,-120px,0px);
+                animation-timing-function: ease-in;
+                opacity: 1;
+            }
+            100%{
+                transform: scale3d(2,2,2) translate3d(-170,-100,0px);
+                opacity: 0;;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="images">
+        <img src="image/Illikkal-kallu.jpg" alt="imagess">
+
+    </div>
+</body>
+</html>

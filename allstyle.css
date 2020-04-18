@@ -1,0 +1,285 @@
+
+.one{
+   
+    background-image: url("image/beckal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000%;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+.contain{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 25px;
+    border: 1px solid darkred;
+    background-color: whitesmoke;
+}
+    
+
+ h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(255, 46, 9);
+    padding-top: 1%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+    
+}
+ p{
+     font-family: 'Times New Roman', Times, serif;
+     text-align: justify;
+     padding-top: 10px;
+     padding-right: 10%;
+     padding-left: 10%;
+     font-size: 15px;
+     
+ }
+ .column{
+    float: center;
+    width: 30%;
+    padding: 0px 10px;
+    margin:10px;
+    height: 100%;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 20px;/* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(7, 38, 68);
+    color: white;
+    height: 300px;
+    width: 350px;
+    transform: rotateY(180deg);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 4x;
+  }
+
+  .column img{
+    height: 300px;
+    width: 350px;
+  }
+h5{
+    text-align: center;
+    padding-top: 28%;
+}
+h6{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    
+}
+.two{
+   
+    background-image: url("image/kannur/madayipara.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000%;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+.three{
+
+    background-image: url("image/kozhikode/parrapily.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000%;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+.four{
+
+    background-image: url("image/malappuram/biyyamkayal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000%;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+.five{
+
+  background-image: url("image/palakad/Malampuzha_Garden_Yakshi_Statue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.six{
+
+  background-image: url("image/idduki/ramakalmedu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.seven{
+
+  background-image: url("image/thissur/chavakad.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.eight{
+
+  background-image: url("image/ernakulam/cherai\ beach.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.nine{
+
+  background-image: url("image/kottayam/Ilaveezhapoonchira.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.ten{
+
+  background-image: url("image/wayanad/banasura\ hill.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.eleven{
+
+  background-image: url("image/alappuzha/Ambalapuzha_Sri_Krishna_Temple.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.twleve{
+
+  background-image: url("image/kollam/kollam\ beach.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.thirteen{
+
+  background-image: url("image/pathanathitta/thriveni\ sangamam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.fourteen{
+
+  background-image: url("image/thiruvanathapuram/magic_planet.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000%;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+.navbar-nav{
+  margin-left: 40%;
+
+}
+
+.nav-item{
+    float:left;
+    font-size: 25px;
+    text-shadow: 4px 4px 6px rgb(109, 6, 74);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.footer{
+  background-color: rgb(6, 43, 17);
+  color: white;
+  height: 3em;
+  margin-top: 0px;
+}
+.footer p{
+ text-align: center;
+ font-weight: bolder;
+ font-family: 'Times New Roman', Times, serif;
+ padding-top:10px;
+}

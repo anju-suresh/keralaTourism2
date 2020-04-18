@@ -1,0 +1,75 @@
+#main {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-weight: bold;
+}
+
+.form-groups input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 19px;
+    transition: .4s;
+}
+input:focus{
+    border: 2px solid #1DA1F2;
+  }
+.form-groups label, .fa-eye, .fa-eye-slash{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+.form-groups label{
+    left: 15px;
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: .4s;
+  }
+  /* span.show{
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+    font-family: 'Open Sans', sans-serif;
+  }
+  input:valid ~ span.show{
+    visibility: visible; */
+  /* } */
+  input:focus ~ label,
+  input:valid ~ label{
+    transform: translateY(-38px);
+    background: white;
+    font-size: 14px;
+    color: #1DA1F2;
+  }
+  .form-groups {
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 39px;
+  }
+
+  .loginhere-link{
+    margin-top: 5px;
+  }
+   .fa-eye, .fa-eye-slash{
+    cursor: pointer;
+    right: 10px;
+    user-select: none;
+    
+
+  }
+  #pass-statuss{
+    right: 15%;
+    top: 60.8%;
+    float: right;
+  }
+   
