@@ -30,14 +30,15 @@
                     <form  id="signup-form" class="signup-form" action="logIn.html" >
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name*"/>
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name*" onkeyup=" return valid();"/>
+                            <p id="four"></p>
                         </div>
                         <div class="form-group">
-                            <textarea name="Address" class="form-input" id="address" rows="1" placeholder="Your Address"></textarea>
+                            <textarea name="Address" class="form-input" id="address" rows="1" placeholder="Your Address" onkeyup="return valid();"></textarea>
                         </div>
                         <div class="form-group">
-                            <select name="dropdown" id="districts" class="form-input">
-                                <option value="Your District" class="form-input" id="s1">Your District*</option>
+                            <select name="dropdown" id="districts" class="form-input" oninput="return valid();">
+                                <option value="Your District" class="form-input" id="s1" >Your District*</option>
                                 <option value="Kasaragod">Kasaragod</option>
                                 <option value="Kannur">Kannur</option>
                                 <option value="Wayanad">Wayanad</option>
@@ -52,21 +53,24 @@
                                 <option value="Alappuzha">Alappuzha</option>
                                 <option value="Kollam">Kollam</option>
                                 <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                               </select>
+                            </select>
+                            <p id="five"></p>
                         </div>
                         <div class="form-group">
                             <input type="radio" name="gender" id="female" value="female">Female
-                            <input type="radio" name="gender" id="male" value="female">Male
-                            <input type="radio" name="gender" id="trans" value="Trans">Transgender
+                            <input type="radio" name="gender" id="male" value="male">Male
+                            <input type="radio" name="gender" id="trans" value="transgender">Transgender
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="state" id="state" placeholder="Your State*"/>
+                            <input type="text" class="form-input" name="state" id="state" placeholder="Your State*" onkeyup=" return valid();"/>
+                            <p id="six"></p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="Country" id="Country" placeholder="Your Country*"/>
+                            <input type="text" class="form-input" name="Country" id="Country" placeholder="Your Country*" onkeyup="return valid();"/>
+                            <p id="seven"></p>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-input" name="number" id="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}||[0-9]{3}.[0-9]{3}.[0-9]{4}||[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="Your Phone* [xxx-xxx-xxxx, xxx.xxx.xxxx, xxx xxx xxxx]" oninput="phonenumber();"/>
+                            <input type="tel" class="form-input" name="number" id="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}||[0-9]{3}.[0-9]{3}.[0-9]{4}||[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="Your Phone* [xxx-xxx-xxxx, xxx.xxx.xxxx, xxx xxx xxxx]" onkeyup="phonenumber();"/>
                             <p id="ph"></p>
                         </div>
                         <div class="form-group">
