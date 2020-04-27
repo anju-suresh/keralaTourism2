@@ -60,33 +60,60 @@ function submitFun(){
     var pass = document.getElementById("password");
     var numb=document.getElementById("num");
     var confm=document.getElementById("re_password");
-    
-    if((email.value.trim()=="")&&(pass.value.trim()=="")&&(numb.value.trim()=="")&&(confm.value.trim()=="")){
+    var name=document.getElementById("name");
+    var dist=document.getElementById("districts");
+    var state=document.getElementById("state");
+    var country=document.getElementById("Country");
+    if(((name.value.trim()=="")||(dist.value.trim()=="")||(state.value.trim()=="")||(country.value.trim()==""))&&(email.value.trim()=="")&&(pass.value.trim()=="")&&(numb.value.trim()=="")&&(confm.value.trim()=="")){
             document.getElementById("main").innerHTML=" * Fields cannot be empty";
             document.getElementById("main").style.color="red";
             email.style.border= "1px dotted red";
-            pass.style.border= "1px dotted red";
             num.style.border= "1px dotted red"; 
             password.style.border= "1px dotted red"; 
             re_password.style.border= "1px dotted red";
+            name.style.border="1px dotted red";
+            districts.style.border="1px dotted red";
+            state.style.border="1px dotted red";
+            Country.style.border="1px dotted red";
             return false;
+    }else if((name.value.trim()=="")||(dist.value.trim()=="")||(state.value.trim()=="")||(country.value.trim()=="")){
+        document.getElementById("four").innerHTML="*Please enter your Name";
+        document.getElementById("four").style.color="red";
+        name.style.border= "1px dotted red";
+        document.getElementById("five").innerHTML="*Please enter your District";
+        document.getElementById("five").style.color="red";
+        dist.style.border= "1px dotted red";
+        document.getElementById("six").innerHTML="*Please enter your state";
+        document.getElementById("six").style.color="red";
+        state.style.border= "1px dotted red";
+        document.getElementById("seven").innerHTML="*Please enter your country";
+        document.getElementById("seven").style.color="red";
+        country.style.border= "1px dotted red";
+        return false;
+        
     }else if(numb.value.trim()=="")
     {
-       document.getElementById("ph").innerHTML="Please fill a valid phone number";
+       document.getElementById("ph").innerHTML="*Please fill a valid phone number";
        document.getElementById("ph").style.color="red";
-       num.style.border= "1px dotted red";  
+       num.style.border= "1px dotted red"; 
+       return false;
     }else  if(email.value.trim()==""){
-        document.getElementById("first").innerHTML="Email cannot be empty";
+        document.getElementById("first").innerHTML="*Email cannot be empty";
         document.getElementById("first").style.color="red";
         email.style.border= "1px dotted red";
+        return false;
     }else  if(pass.value.trim()==""){
-        document.getElementById("two").innerHTML="Password cannot be empty";
+        document.getElementById("two").innerHTML="*Password cannot be empty";
         document.getElementById("two").style.color="red";
         password.style.border= "1px dotted red";
+        return false;
+        
     }else  if(confm.value.trim()==""){
-        document.getElementById("alert").innerHTML="Please Re-enter the Password";
+        document.getElementById("alert").innerHTML="*Please Re-enter the Password";
         document.getElementById("alert").style.color="red";
         re_password.style.border= "1px dotted red";
+        return false;
+        
     }else{
         document.getElementById("main").innerHTML=" ";
         document.getElementById("first").innerHTML=" ";
@@ -96,10 +123,12 @@ function submitFun(){
         email.style.border= "1px solid #ebebeb";  
         pass.style.border= "1px solid #ebebeb";  
         re_password.style.border= "1px solid #ebebeb";
+        name.style.border="1px dotted #ebebeb";
+        districts.style.border="1px dotted #ebebeb";
+        state.style.border="1px dotted #ebebeb";
+        Country.style.border="1px dotted #ebebeb";
 	    return true;
     }
-
-
 }
 
 function phonenumber()
@@ -108,9 +137,10 @@ function phonenumber()
     
     if(numb.value.trim()=="")
      {
-        document.getElementById("ph").innerHTML="Please fill your phone number";
+        document.getElementById("ph").innerHTML="*Please fill a valid phone number";
         document.getElementById("ph").style.color="red";
-        num.style.border= "1px dotted red";  
+        num.style.border= "1px dotted red"; 
+        return false; 
 	 }
    else
      {
@@ -124,7 +154,7 @@ function check(){
     var passwd=document.getElementById("password").value;
     var confm=document.getElementById("re_password").value;
     if(passwd!=confm){
-        document.getElementById("alert").innerHTML="Those passwords didn't match Try again";
+        document.getElementById("alert").innerHTML="*Those passwords didn't match Try again";
         document.getElementById("alert").style.color="red";
         document.getElementById("password").innerHTML="";
         document.getElementById("re_password").innerHTML="";
@@ -143,18 +173,18 @@ function submitFun1(){
     var pass = document.getElementById("password");
     
     if((email.value.trim()=="")&&(pass.value.trim()=="")){
-            document.getElementById("main").innerHTML=" * Fields cannot be empty";
+            document.getElementById("main").innerHTML=" *Fields cannot be empty";
             document.getElementById("main").style.color="red";
             email.style.border= "1px dotted red";
             pass.style.border= "1px dotted red";
             return false;
     }else  if(email.value.trim()==""){
-        document.getElementById("first").innerHTML="Email cannot be empty";
+        document.getElementById("first").innerHTML="*Email cannot be empty";
         document.getElementById("first").style.color="red";
         email.style.border= "1px dotted red";
         return false;
     }else  if(pass.value.trim()==""){
-        document.getElementById("two").innerHTML="Password cannot be empty";
+        document.getElementById("two").innerHTML="*Password cannot be empty";
         document.getElementById("two").style.color="red";
         password.style.border= "1px dotted red";
         return false;
@@ -167,5 +197,27 @@ function submitFun1(){
 	    return true;
     }
 
+}
+function valid(){
+    var name=document.getElementById("name");
+    var dists=document.getElementById("districts");
+    var state=document.getElementById("state");
+    var country=document.getElementById("Country");
+    if(name.value.trim()!=""){
+        document.getElementById("four").innerHTML=" ";
+        name.style.border= "1px solid #ebebeb";      
+    } if(dists.value.trim()!=""){
+        document.getElementById("five").innerHTML=" ";
+        districts.style.border= "1px solid #ebebeb";  
 
+    } if(state.value.trim()!=""){
+        document.getElementById("six").innerHTML=" ";
+        state.style.border= "1px solid #ebebeb";
+
+    }if(country.value.trim()!=""){
+        document.getElementById("seven").innerHTML=" ";
+        Country.style.border= "1px solid #ebebeb"; 
+    }
+    return true;
+     
 }
